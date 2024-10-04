@@ -1,4 +1,5 @@
-import Card from "../components/Card";
+//Ccomponents/Form.js
+import Card from "./Card";
 
 function Form (props){
     return (

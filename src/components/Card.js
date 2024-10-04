@@ -1,60 +1,61 @@
-/*
 
-function Card(props) {
-    console.log(props)
+
+// function Card(props) {
+//     console.log(props)
     
-    return (
-        <div className="card">
-        <div className="header-container">
-          <div className='incident-info-container'>
-            <div className='badge badge-on_hold' style={{ backgroundColor: status === 'in_progress' ? 'red' : 'blue' }}>{ props.status }</div>
-            <span>{props.incidentNumber}</span>
-          </div>
-          <div className='header-menu-container'>
-            <i className='fa fa-ellipsis-vertical'></i>
-          </div>
-        </div>
-        <h5>{props.title}</h5>
-        <small>{props.time}</small>
-        <hr />
-        <div className='further-detail-container'>
-          <div className='further-detail-item-container'>
-            <span>Priority</span> <br />
-            <span>{props.priority}</span>
-          </div>
-          <div className='further-detail-item-container'>
-            <span>SLA</span> <br />
-            <span>Blah blah blah</span>
-          </div>
-        </div>
-      </div>
-    );
-}
+//     return (
+//         <div className="card">
+//         <div className="header-container">
+//           <div className='incident-info-container'>
+//             <div className='badge badge-on_hold' style={{ backgroundColor: props.status === 'in_progress' ? 'red' : 'blue' }}>{ props.status }</div>
+//             <span>{props.incidentNumber}</span>
+//           </div>
+//           <div className='header-menu-container'>
+//             <i className='fa fa-ellipsis-vertical'></i>
+//           </div>
+//         </div>
+//         <h5>{props.title}</h5>
+//         <small>{props.time}</small>
+//         <hr />
+//         <div className='further-detail-container'>
+//           <div className='further-detail-item-container'>
+//             <span>Priority</span> <br />
+//             <span>{props.priority}</span>
+//           </div>
+//           <div className='further-detail-item-container'>
+//             <span>SLA</span> <br />
+//             <span>Blah blah blah</span>
+//           </div>
+//         </div>
+//       </div>
+//     );
+// }
 
-export default Card;
-
-
-*/
+// export default Card;
 
 
 
 
 
+
+
+
+
+
+//components/Card.js
 function Card(props) {
   const handelDeleteIconClick = () => {
-props.deleteHandler(props.incidentNumber);
+    props.deleteHandler(props.incidentNumber);
 
   }
 
-
-
   return (
-      <div className="card">
+    <div className="card">
       <div className="header-container">
         <div className='incident-info-container'>
           <div style={{
-            backgroundColor: props.status == "in_progress" ? "yellow" : "cyan",
-          }} className='badge'>{ props.status }</div>
+            backgroundColor: props.status == "in_progress" ? "red" : "cyan",
+          }} className='badge'>{props.status}</div>
           <span>{props.incidentNumber}</span>
         </div>
         <div className='header-menu-container'>
@@ -78,4 +79,4 @@ props.deleteHandler(props.incidentNumber);
   );
 }
 
-export default Card;     
+export default Card;
